@@ -1,0 +1,21 @@
+/*
+Theme Name: Mon thème enfant
+TempLate: generatepress
+*/ 
+
+body {
+    background-color: teal;
+        
+}
+
+.site-header {
+    background-color: purple;
+    padding: 2rem;
+}
+
+figure {
+    margin: 0;
+    width: 200px;
+    height: auto;   
+}
+
