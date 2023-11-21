@@ -13,6 +13,26 @@ $args = array(
 );
 $query = new WP_Query($args);
 ?>
+<div>
+<?php
+$services = get_terms('services');
+//var_dump($services);
+if ($services) : 
+?>
+
+<ul class="services">
+    <?php foreach ($services as $service) : 
+    $service_name = $service->name;
+    $service_id = $service->term_id;
+    ?>
+    <li>
+        <?php echo $service->name; ?>
+    </li>
+    <?php endforeach; ?>
+</ul>
+
+<?php endif; ?>
+
 <?php if ($query->have_posts()) : while ($query->have_posts()) : $query->the_post(); ?>
 <article id="member-<?php the_ID(); ?>"class="member">
    <figure class="media">
@@ -31,6 +51,22 @@ $query = new WP_Query($args);
     <?php the_excerpt(); ?>
 </p>
 
-<?php endwhile; endif; ?>
+<?php if (get_field('member_e-mail')) : ?>
+    <p class="email">
+        <?php the_field('member_e-mail'); ?>
+    </p>
+    <?php endif; ?>
+    <?php if (get_field('member_phone')) : ?>
+    <p class="email">
+        <?php the_field('member_phone'); ?>
+    </p>
 
+<?php endif; ?>
+
+</article>
+
+<?php endwhile; endif; wp_reset_postdata(); ?>
+
+
+</div>
 <?php get_footer(); 

@@ -5,3 +5,11 @@
 [20-Nov-2023 09:54:03 UTC] PHP Parse error:  syntax error, unexpected end of file in C:\Users\anton\OneDrive\Bureau\B2\WORDPRESS\wp-local1\app\public\wp-content\themes\monthemeenfant\team-list.php on line 38
 [20-Nov-2023 10:40:19 UTC] PHP Parse error:  syntax error, unexpected token "endwhile", expecting end of file in C:\Users\anton\OneDrive\Bureau\B2\WORDPRESS\wp-local1\app\public\wp-content\themes\monthemeenfant\team-list.php on line 33
 [20-Nov-2023 10:40:36 UTC] PHP Parse error:  syntax error, unexpected token "endwhile", expecting end of file in C:\Users\anton\OneDrive\Bureau\B2\WORDPRESS\wp-local1\app\public\wp-content\themes\monthemeenfant\team-list.php on line 34
+[21-Nov-2023 13:29:41 UTC] PHP Parse error:  syntax error, unexpected token "endwhile", expecting "elseif" or "else" or "endif" in C:\Users\anton\OneDrive\Bureau\B2\WORDPRESS\wp-local1\app\public\wp-content\themes\monthemeenfant\single-team.php on line 31
+[21-Nov-2023 14:53:54 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function the_tittle() in C:\Users\anton\OneDrive\Bureau\B2\WORDPRESS\wp-local1\app\public\wp-content\themes\monthemeenfant\single-team.php:42
+Stack trace:
+#0 C:\Users\anton\OneDrive\Bureau\B2\WORDPRESS\wp-local1\app\public\wp-includes\template-loader.php(106): include()
+#1 C:\Users\anton\OneDrive\Bureau\B2\WORDPRESS\wp-local1\app\public\wp-blog-header.php(19): require_once('C:\\Users\\anton\\...')
+#2 C:\Users\anton\OneDrive\Bureau\B2\WORDPRESS\wp-local1\app\public\index.php(17): require('C:\\Users\\anton\\...')
+#3 {main}
+  thrown in C:\Users\anton\OneDrive\Bureau\B2\WORDPRESS\wp-local1\app\public\wp-content\themes\monthemeenfant\single-team.php on line 42

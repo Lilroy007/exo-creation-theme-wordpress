@@ -22,6 +22,19 @@ $args = array(
 
 register_post_type('team', $args);
 
+$labels = array (
+    'name' => 'Services',
+);
+
+$args = array (
+    'labels' => $labels,
+    'public' => true,
+    'show_in_rest' => true,
+    'hierarchical' => true, // Pour avoir des sous-catégories
+);
+
+register_taxonomy('services', 'team', $args);
+
 }
 // Hook pour l'ajout des custom post types
 add_action('init', 'add_custom_post_types');
