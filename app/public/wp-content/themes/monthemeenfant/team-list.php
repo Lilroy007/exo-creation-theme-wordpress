@@ -24,9 +24,12 @@ if ($services) :
     <?php foreach ($services as $service) : 
     $service_name = $service->name;
     $service_id = $service->term_id;
+    $service_link = get_term_link($service_id); 
     ?>
     <li>
+        <a href="<?php echo $service_link; ?>">
         <?php echo $service->name; ?>
+        </a>
     </li>
     <?php endforeach; ?>
 </ul>
